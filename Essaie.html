@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sypher - Innovation Digitale</title>
+  <style>
+    /* --- STYLE GLOBAL --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top left, #0d0d0d, #000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #00ffff;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    /* --- SECTION ACCUEIL --- */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+                  url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80') center/cover;
+      color: #fff;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      color: #00ffff;
+      text-shadow: 0 0 15px #00ffff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 12px 30px;
+      border: 2px solid #00ffff;
+      color: #00ffff;
+      background: transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: #00ffff;
+      color: #000;
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    /* --- SECTION A PROPOS --- */
+    section {
+      padding: 100px 15%;
+    }
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about h2 {
+      color: #00ffff;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 700px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    /* --- SERVICES --- */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .service-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(0,255,255,0.2);
+      border-radius: 10px;
+      padding: 30px;
+      transition: all 0.4s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(0,255,255,0.3);
+    }
+
+    .service-card h3 {
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+
+    /* --- CONTACT --- */
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid rgba(0,255,255,0.2);
+      color: #aaa;
+    }
+
+    /* --- ANIMATIONS --- */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sypher</h1>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="accueil">
+    <h2>Bienvenue chez Sypher</h2>
+    <p>Innovation. Technologie. Excellence digitale.</p>
+    <a href="#services"><button class="btn">Découvrir nos services</button></a>
+  </section>
+
+  <section id="apropos" class="about fade-in">
+    <h2>À propos</h2>
+    <p>Sypher est une jeune entreprise digitale spécialisée dans la création de sites web modernes, 
+    l’automatisation intelligente et le design technologique. Nous fusionnons innovation, performance et esthétique futuriste 
+    pour propulser votre présence en ligne au niveau supérieur.</p>
+  </section>
+
+  <section id="services" class="fade-in">
+    <h2 style="text-align:center; color:#00ffff; margin-bottom:40px;">Nos Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Développement Web</h3>
+        <p>Sites vitrines, portfolios, e-commerce et plateformes sur mesure avec design moderne et responsive.</p>
+      </div>
+      <div class="service-card">
+        <h3>Design Graphique</h3>
+        <p>Identité visuelle, logos, bannières, et UI futuriste adaptée à vos besoins professionnels.</p>
+      </div>
+      <div class="service-card">
+        <h3>Automatisation & Outils</h3>
+        <p>Intégration d’outils digitaux pour automatiser votre business et améliorer votre productivité.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact fade-in">
+    <h2 style="color:#00ffff; margin-bottom:20px;">Contactez-nous</h2>
+    <p>Besoin d’un site web ou d’un projet numérique ? Parlons-en !</p>
+    <a href="https://t.me/@Willlinson" target="_blank">
+      <button class="btn">Nous écrire sur Telegram</button>
+    </a>
+  </section>
+
+  <footer>
+    © 2025 Sypher. Tous droits réservés.
+  </footer>
+
+  <script>
+    // --- ANIMATION SCROLL ---
+    const faders = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      faders.forEach(fade => {
+        const fadeTop = fade.getBoundingClientRect().top;
+        if (fadeTop < triggerBottom) {
+          fade.classList.add('visible');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
